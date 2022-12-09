@@ -6,7 +6,6 @@ RUN apt-get update && apt-get -y install \
 RUN apt-get install git curl python3-pip ffmpeg -y
 ARG USER=root
 USER $USER
-RUN python3 -m jepthon
 WORKDIR /app
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
